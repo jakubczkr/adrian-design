@@ -1,0 +1,13 @@
+body {
+  background-image: url('src/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo { 
+  width: 50%;
+  margin-top: 250px;
+}
