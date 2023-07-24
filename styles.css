@@ -2,12 +2,17 @@ body {
   background-image: url('src/background.png');
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 15%;
+  
+  overflow: hidden;
 }
 
 .logo { 
-  width: 50%;
-  margin-top: 250px;
+  width: 700px;
 }
