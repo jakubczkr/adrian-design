@@ -16,3 +16,7 @@ body {
 .logo { 
   width: 700px;
 }
+
+#main-div {
+  display: none;
+}
