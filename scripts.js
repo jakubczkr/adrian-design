@@ -9,7 +9,6 @@ function hide(divId) {
 }
 
 onwheel = (event) => { 
-    console.log(event.deltaY)
     if (event.deltaY < 0) {
         show("logo-div")
         hide("main-div")
