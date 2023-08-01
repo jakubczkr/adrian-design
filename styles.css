@@ -11,6 +11,8 @@ body {
   align-items: center;
   
   overflow: hidden;
+
+  font-family: 'Barlow Condensed';
 }
 
 .logo { 
@@ -59,8 +61,8 @@ body {
 }
 
 #header-div > li:hover {
-  color: gold;
-  text-decoration: underline gold;
+  color: rgb(247, 175, 32);
+  text-decoration: underline rgb(247, 175, 32);
   text-underline-offset: 4px;
   font-size: 21px;
 }
@@ -99,7 +101,7 @@ body {
   grid-area: 1 / 1 / 2 / 2; 
   width: auto;
 
-  color: gold;
+  color: rgb(247, 175, 32);
   text-transform: uppercase;
   font-size: 100px;
   padding: 10px;
