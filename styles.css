@@ -15,9 +15,15 @@ body {
   font-family: 'Barlow Condensed';
 }
 
+#logo-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .logo { 
   width: 700px;
-  padding-top: 15%;
 }
 
 #main-div {
