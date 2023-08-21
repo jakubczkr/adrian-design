@@ -1,45 +1,77 @@
 <!DOCTYPE html>
 <html lang="en"> 
+
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="src/logo.svg">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow+Condensed">
-  <script src="scripts.js"></script>
+  <script src="scrollpage.min.js"></script>
+
   <title>Adrian Design</title>
+
 </head>
+
 <body>
-  <div id="logo-div">
-    <img src="src/logo.svg" alt="Logo" class="logo"/>
-  </div>
-  <div id="main-div">
-    <div id="header-div">
-      <div id="logo-header-div">
-        <img src="src/logo.svg" alt="" class="logo-header"/>
-      </div>
-      <ul id="menu-list">
-        <li>Strona główna</li>
-        <li>Oferta</li>
-        <li>Projekty</li>
-        <li>Kontakt</li>
-      </ul>
+
+  <div id="presentation">
+
+    <div class="page-item" id="logo-div">
+      <img src="src/logo.svg" alt="Logo" class="logo"/>
     </div>
-    <div id="content-div">
-      <div class="projects-div">
-        <div id="projects-div-title"><div>Projekty</div></div>
-        <div id="projects-div-description">Przykładowe projekty wykonane w ostatnim czasie</div>
-        <div id="projects-div-images">
-          <img src="src/projects/1.jpg" alt="" class="project-image"/>
-          <img src="src/projects/2.jpg" alt="" class="project-image"/>
-          <img src="src/projects/3.jpg" alt="" class="project-image"/>
-          <img src="src/projects/4.jpg" alt="" class="project-image"/>
+
+    <div class="page-item" id="main-div">
+      <div id="header-div">
+        <div id="logo-header-div">
+          <img src="src/logo.svg" alt="" class="logo-header"/>
+        </div>
+        <ul id="menu-list">
+          <li>Strona główna</li>
+          <li>Oferta</li>
+          <li>Projekty</li>
+          <li>Kontakt</li>
+        </ul>
+      </div>
+      <div id="content-div">
+        <div class="projects-div">
+          <div id="projects-div-title"><div>Projekty</div></div>
+          <div id="projects-div-description">Przykładowe projekty wykonane w ostatnim czasie</div>
+          <div id="projects-div-images">
+            <img src="src/projects/1.jpg" alt="" class="project-image"/>
+            <img src="src/projects/2.jpg" alt="" class="project-image"/>
+            <img src="src/projects/3.jpg" alt="" class="project-image"/>
+            <img src="src/projects/4.jpg" alt="" class="project-image"/>
+          </div>
         </div>
       </div>
+      <div id="footer-div">
+        <small>Adrian Design</small>
+      </div>
     </div>
-    <div id="footer-div">
-      <small>Adrian Design</small>
-    </div>
+
   </div>
+
+  <script>
+    const scrollPage = new ScrollPage("#presentation", {
+      // easing functions
+      animation: "easeInSine",
+      // animation speed
+      time: 500,
+      // show/hide scrollbar
+      scrollBar: false,
+      // css class name for active page element
+      pageSelectedClass:"active",
+      // css class name for active menu item
+      menuSelectedClass:"active",
+      // trigger scrollpage if scrolling content reach bottom or top
+      triggerScrollChildren: false,
+      // relative to parent height or nor
+      relative: false,
+    });
+  </script>
+
 </body>
+
 </html>

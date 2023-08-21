@@ -30,7 +30,7 @@ body {
 
 #main-div {
   min-height: 100vh;
-  display: none;
+  display: flex;
   flex-direction: column;
   width: 100%;
 }
