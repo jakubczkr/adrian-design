@@ -80,6 +80,7 @@ body {
   color: rgb(247, 175, 32);
   text-decoration: underline rgb(247, 175, 32);
   text-underline-offset: 4px;
+  cursor: default;
 }
 
 .logo-header { 
