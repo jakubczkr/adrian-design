@@ -84,7 +84,7 @@ body {
 }
 
 .logo-header { 
-  height:80px;
+  height: 80px;
 }
 
 #content-div {
@@ -93,7 +93,7 @@ body {
   padding-right: 200px;
 }
 
-.projects-div {
+.content {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: repeat(2, 1fr);
@@ -101,7 +101,7 @@ body {
   grid-row-gap: 10px;
 }
 
-#projects-div-images { 
+.div-images { 
   align-self: center;
   justify-self: center;
 
@@ -114,7 +114,7 @@ body {
   grid-row-gap: 0px;
 }
 
-#projects-div-title { 
+.div-title { 
   align-self: center;
   justify-self: center;
 
@@ -129,7 +129,7 @@ body {
   text-align: center;
 }
 
-#projects-div-title > div {
+.div-title > div {
 
   background:
     linear-gradient(to right, white 4px, transparent 4px) 0 0,
@@ -144,7 +144,7 @@ body {
   padding-left: 20px;
 }
 
-#projects-div-description { 
+.div-description { 
   align-self: center;
   justify-self: center;
 
@@ -171,4 +171,16 @@ body {
 
 .project-image:hover {
   transform: scale(1.2)
+}
+
+.content {
+  display: none;
+}
+
+.content:first-of-type {
+  display: grid;
+}
+
+b {
+  color: rgb(247, 175, 32);;
 }

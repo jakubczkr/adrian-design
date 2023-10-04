@@ -9,6 +9,7 @@
   <link rel="icon" href="src/logo.svg">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow+Condensed">
   <script src="scrollpage.min.js"></script>
+  <script src="script.js"></script>
 
   <title>Adrian Design</title>
 
@@ -28,24 +29,43 @@
           <img src="src/logo.svg" alt="" class="logo-header"/>
         </div>
         <ul id="menu-list">
-          <li>Strona główna</li>
-          <li>Oferta</li>
-          <li>Projekty</li>
-          <li>Kontakt</li>
+          <li onclick="testF('main-page-div')">Strona główna</li>
+          <li onclick="testF('offer-div')">Oferta</li>
+          <li onclick="testF('projects-div')">Projekty</li>
+          <li onclick="testF('contact-div')">Kontakt</li>
         </ul>
       </div>
+
       <div id="content-div">
-        <div class="projects-div">
-          <div id="projects-div-title"><div>Projekty</div></div>
-          <div id="projects-div-description">Przykładowe projekty wykonane w ostatnim czasie</div>
-          <div id="projects-div-images">
+
+        <div class="content" id="projects-div">
+          <div class="div-title"><div>Projekty</div></div>
+          <div class="div-description">Przykładowe projekty wykonane w ostatnim czasie</div>
+          <div class="div-images">
             <img src="src/projects/1.jpg" alt="" class="project-image"/>
             <img src="src/projects/2.jpg" alt="" class="project-image"/>
             <img src="src/projects/3.jpg" alt="" class="project-image"/>
             <img src="src/projects/4.jpg" alt="" class="project-image"/>
           </div>
         </div>
+
+        <div class="content" id="offer-div">
+          Tu będzie oferta
+        </div>
+
+        <div class="content" id="main-page-div">
+          Tu będzie strona główna
+        </div>
+
+        <div class="content" id="contact-div">
+          <div class="div-title"><div>Kontakt</div></div>
+          <div class="div-description">Jeżeli masz do mnie jakieś pytania skontakuj się ze mną <b>już dziś</b></div>
+          <div class="div-images"">
+            <img src="src/ikony duże.png" alt="" style="padding: 200px;"/>
+          </div>
+        </div>
       </div>
+
       <div id="footer-div">
         <small>Adrian Design</small>
       </div>
