@@ -184,3 +184,18 @@ body {
 b {
   color: rgb(247, 175, 32);;
 }
+
+
+#contact-footer-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+
+  margin-bottom: 30px;
+  padding-left: 30px;
+
+  box-shadow: inset 0px 0px 400px 110px rgba(0, 0, 0, .7);
+
+  width: 100hv;
+}
