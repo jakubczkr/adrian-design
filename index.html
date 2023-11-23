@@ -1,114 +1,106 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="pl">
 
 <head>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="src/logo.svg">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow+Condensed">
-  <script src="scrollpage.min.js"></script>
-  <script src="script.js"></script>
-
+  <link rel="stylesheet" href="styles.css">
+  <script src="scripts.js"></script>
   <title>Adrian Design</title>
-
 </head>
 
 <body>
+  
+  <div id="main-div">
 
-  <div id="presentation">
+    <div id="welcome-page-div">
 
-    <div class="page-item" id="logo-div">
-      <img src="src/logo.svg" alt="Logo" class="logo"/>
+      <div id="welcome-page-logo-div"><img src="src/logo.svg" alt="Logo" id="logo-img"/></div>
+      <div id="welcome-page-enter-div" onclick="showMainContent()">Wejdź</div>
+
     </div>
 
-    <div class="page-item" id="main-div">
+
+    <div id="content-div">
+
       <div id="header-div">
         <div id="logo-header-div">
-          <img src="src/logo.svg" alt="" class="logo-header"/>
+          <img src="src/logo.svg" alt="Logo" id="logo-header-img"/>
         </div>
         <ul id="menu-list">
-          <li onclick="testF('main-page-div')">Strona główna</li>
-          <li onclick="testF('offer-div')">Oferta</li>
-          <li onclick="testF('projects-div')">Projekty</li>
-          <li onclick="testF('contact-div')">Kontakt</li>
+          <li onclick="backToMain()">Strona główna</li>
+          <li onclick="changePage('offer-div')">Oferta</li>
+          <li onclick="changePage('projects-div')">Projekty</li>
+          <li onclick="changePage('contact-div')">Kontakt</li>
         </ul>
       </div>
 
-      <div id="content-div">
-
-        <div class="content" id="projects-div">
-          <div class="div-title"><div>Projekty</div></div>
-          <div class="div-description">Przykładowe projekty wykonane w ostatnim czasie</div>
-          <div class="div-images">
-            <img src="src/projects/1.jpg" alt="" class="project-image"/>
-            <img src="src/projects/2.jpg" alt="" class="project-image"/>
-            <img src="src/projects/3.jpg" alt="" class="project-image"/>
-            <img src="src/projects/4.jpg" alt="" class="project-image"/>
+      <div id="pages-div">
+        <div id="offer-div" class="content">
+          <div class="content-title"><div>Oferta</div></div>
+          <div class="content-description">Przykładowe ceny oraz oraz informacje odnośnie realizacji</div>
+          <div class="content-left">
+            <div id="content-cards">
+              <div id="cards-top">wizytówki</div>
+              <div id="cards-images">
+                <img src="src/economic.svg" class="card-image"/>
+                <img src="src/standard.svg" class="card-image"/>
+                <img src="src/vip.svg" class="card-image"/>
+              </div>
+              <div id="cards-bottom">*podany czas realizacji jest orientacyjny</div>
+            </div>
           </div>
         </div>
 
-        <div class="content" id="offer-div">
-          Tu będzie oferta
-        </div>
-
-        <div class="content" id="main-page-div">
-          Tu będzie strona główna
-        </div>
-
-        <div class="content" id="contact-div">
-          <div class="div-title"><div>Kontakt</div></div>
-          <div class="div-description">Jeżeli masz do mnie jakieś pytania skontakuj się ze mną <b>już dziś</b></div>
-          <div class="div-images"">
-            <img src="src/ikony duże.png" alt="" style="padding: 200px;"/>
+        <div id="projects-div" class="content">
+          <div class="content-title"><div>Projekty</div></div>
+          <div class="content-description"><div>Przykładowe projekty wykonane w ostatnim czasie</div></div>
+          <div class="content-left">
+            <div id="content-images">
+              <img src="src/projects/1.jpg" class="project-image"/>
+              <img src="src/projects/2.jpg" class="project-image"/>
+              <img src="src/projects/3.jpg" class="project-image"/>
+              <img src="src/projects/4.jpg" class="project-image"/>
+            </div>
           </div>
+        </div>
 
-          <div id="contact-footer-div">
-
-
-            <img src="src/wiadomości.svg">
-            Napisz
-            adrian.graphic@op.pl
-
-            <img src="src/tel.svg">
-
-            Zadzwoń
-            782-048-337
-
-            <img src="src/fb.svg">
-            <img src="src/insta.svg">
-
-
+        <div id="contact-div" class="content">
+          <div class="content-title"><div>Kontakt</div></div>
+          <div class="content-description">Jeżeli masz do mnie jakieś pytania skontakuj się ze mną <b>już dziś</b></div>
+          <div class="content-left"">
+            <img src="src/ikony duże.png" class="project-image"/>
           </div>
         </div>
       </div>
 
-      <!-- <div id="footer-div">
-        <small>Adrian Design</small>
-      </div> -->
+      <div id="footer-div">
+        <div class="footer-first">
+          <img src="src/wiadomości.svg" class="footer-image">
+          <div class="footer-text">
+            <div class="footer-text-first">Napisz</div>
+            <div class="footer-text-second">adrian.graphic@op.pl</div>
+          </div>
+        </div>
+
+        <div class="footer-first">
+          <img src="src/tel.svg" class="footer-image">
+          <div class="footer-text">
+            <div class="footer-text-first">Zadzwoń</div>
+            <div class="footer-text-second">782-048-337</div>            
+          </div>
+        </div>
+
+        <div class="footer-second">
+          <img src="src/fb.svg" class="footer-image">
+          <img src="src/insta.svg" class="footer-image">
+        </div>
+      </div>
+
     </div>
-
   </div>
-
-  <script>
-    const scrollPage = new ScrollPage("#presentation", {
-      // easing functions
-      animation: "easeInSine",
-      // animation speed
-      time: 500,
-      // show/hide scrollbar
-      scrollBar: false,
-      // css class name for active page element
-      pageSelectedClass:"active",
-      // css class name for active menu item
-      menuSelectedClass:"active",
-      // trigger scrollpage if scrolling content reach bottom or top
-      triggerScrollChildren: false,
-      // relative to parent height or nor
-      relative: false,
-    });
-  </script>
 
 </body>
 
